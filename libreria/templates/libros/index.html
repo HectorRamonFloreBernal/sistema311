@@ -1,0 +1,62 @@
+<!-- Path: libreria\templates\paginas\nosotros.html -->
+{% extends "base.html" %}
+
+<!--  se crea el bloque de titulo  -->
+{% block titulo %} LISTA DE LIBROS {% endblock %}
+
+<!--  se crea el bloque de contenido  -->
+{% block contenido %} 
+
+<!--  se crea el bloque de contenido  -->
+   <div class="card">
+<!--  se crea el bloque de cabecera  -->
+    <div class="card-header">
+<!--  se crea el bloque de contenido con un boton para crear nuevo libro  -->
+        <a name="" id="" class="btn btn-success" href="{% url 'crear' %} " role="button">Agregar nuevo Libros</a>
+        Lista de libros
+    </div>
+    <div class="card-body">
+        <!--  se crea el bloque de contenido  -->
+        <h4 class="card-title">Libros</h4>
+<!--  se crea el bloque de contenido  de una tabla de contenico -->
+
+        <table class="table">
+            <thead>
+                <tr>
+<!--  se crea el bloque de contenido  de una tabla de contenico  columnas-->
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Imagen</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                # se crea el bloque de contenido  de una tabla de contenico  filas
+                {% for libro in libros %}
+<!--  se crea el bloque de contenido  de una tabla de contenico  filas--> 
+                <tr>
+                    <td>{{ libro.id }}</td>
+                    <td>{{ libro.titulo }}</td>
+                    <td>
+                        <img src="{{ libro.imagen.url }}" height = "100" />
+                        
+                    </td>
+                    <td>{{ libro.descripcion }}</td>
+                    <td> <a name="" id="" class="btn btn-info" href="{% url 'editar'%}" role="button">Editar</a> 
+                         | 
+                         <a name="" id="" class="btn btn-danger" href="{% url 'borrar'%}" role="button">Borrar</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <!---->
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+   </div>
+
+{% endblock %}

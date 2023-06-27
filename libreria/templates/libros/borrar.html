@@ -1,0 +1,31 @@
+<!-- Path: libreria\templates\paginas\nosotros.html -->
+{% extends "base.html" %}
+
+<!--  se crea el bloque de titulo  -->
+{% block titulo %} Editar un Libro {% endblock %}
+
+<!--  se crea el bloque de contenido  -->
+{% block contenido %} 
+
+  <!--  se crea el bloque de contenido de borar libro -->
+  <div class="card">
+
+    <!--  se crea el bloque de cabecera de borrar libro -->
+            <div class="card-header">
+                Borrar la Informacion de un Libro
+            </div>
+            <div class="card-body">
+    
+    <!--  se crea el bloque de titulo de borrar  libro -->            
+                <h4 class="card-title">Datos del Libro</h4>
+    
+    <!--  se crea el bloque de contenido de borrar  libro -->
+                {% include 'libros/form.html' %} 
+    
+            </div>
+            <div class="card-footer text-muted">
+                Footer
+            </div>
+        </div>
+
+{% endblock %}

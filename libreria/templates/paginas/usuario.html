@@ -1,0 +1,31 @@
+<!-- Path: libreria\templates\paginas\nosotros.html -->
+{% extends "base2.html" %}
+
+<!--  se crea el bloque de titulo  -->
+{% block titulo %} Acceos a Usuario {% endblock %}
+
+<!--  se crea el bloque de contenido  -->
+{% block contenido %} 
+
+  <!--  se crea el bloque de contenido de eitar libro -->
+  <div class="card">
+
+    <!--  se crea el bloque de cabecera de editar libro -->
+            <div class="card-header">
+                Inicia el Proceso de Acceos a Usuario
+            </div>
+            <div class="card-body">
+    
+    <!--  se crea el bloque de titulo de editar libro -->            
+                <h4 class="card-title">Datos del Usuario</h4>
+    
+    <!--  se crea el bloque de contenido de editar libro -->
+                {% include 'paginas/formUsuario.html' %} 
+    
+            </div>
+            <div class="card-footer text-muted">
+                Footer
+            </div>
+        </div>
+
+{% endblock %}

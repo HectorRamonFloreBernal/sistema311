@@ -1,0 +1,27 @@
+<!-- Path: libreria\templates\paginas\nosotros.html -->
+{% extends "base.html" %}
+
+<!--  se crea el bloque de titulo  -->
+{% block titulo %} Inicio {% endblock %}
+
+<!--  se crea el bloque de contenido  -->
+{% block contenido %} 
+<!--  se crea el bloque de contenido  de inicio -->
+   <div class="p-5 bg-light">
+        <div class="container">
+<!--  se asigna el titulo de entrada -->
+            <h1 class="display-3">Bienvenidos al Sitio de la Liberria</h1>
+<!--  se asigna el subtitulo de entrada -->
+            <p class="lead">Empezar a ingreasar Libros</p>
+            <hr class="my-2">
+           
+            <p class="lead">
+<!--  se crea el boton de ejemplo -->
+                <a class="btn btn-primary btn-lg" href=""{% url 'usuario' %}"" role="button">Ingresar</a>
+            </p>
+        </div>
+    </div>
+    
+
+
+{% endblock %}
