@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Aplicaciones que se creo para el proyecto311
     'libreria',
 ]    
 

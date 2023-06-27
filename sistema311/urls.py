@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+# se importa el modulo include para poder incluir las urls de la app libreria
 from django.urls import include
 
+# se crea una lista de url en el siatema311
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # se crea la url para la app libreria en sistema311
     path('', include('libreria.urls')),
 ]
 
